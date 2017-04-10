@@ -1,4 +1,8 @@
 <h1>USER NR: <%=@user.id%></h1>
+<% flash.each do |message_type, message| %>
+  <div class="<%= message_type %>"><%= message %></div>
+<% end %>
+<br />
 <table>
   <tr>
     <th>First Name</th>
