@@ -7,8 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="row">
+    <div class="col-md-9">
+      <h1>GAME_LAB</h1>
+    </div>
+    <div class="col-md-3">
+      <% if logged_in? %>
+        <%= link_to "PROFILE", current_user, class: "btn btn-default" %>
+        <%= link_to "ALL USERS", users_path, class: "btn btn-default" %>
+        <%= link_to "LOG OUT", logout_path, method: :delete, class: "btn btn-default" %>
+      <% else %>
+        <%= link_to "SIGN UP", new_user_path, class: "btn btn-default" %>
+        <%= link_to "SIGN IN", login_path, class: "btn btn-default" %>
+      <% end %>
+    </div>
+  </div>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>

@@ -1,20 +1,28 @@
-<h1>CREATE A NEW USER!</h1>
+<div class="row">
+  <div class="col-md-4">
 
-<%= form_for(@user) do |f| %>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
-    <br />
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
-    <br />
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-    <br />
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-    <br />
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-    <br />
-  <%= f.submit "Create a user" %>
-<% end %>
+  </div>
+  <div class="col-md-4">
+    <%= form_for(@user) do |f| %>
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, class: "form-control" %>
+        <br />
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, class: "form-control" %>
+        <br />
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "form-control" %>
+        <br />
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "form-control" %>
+        <br />
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+        <br />
+      <%= f.submit "Create a user", class: "btn btn-default" %>
+    <% end %>
+  </div>
+  <div class="col-md-4">
+
+  </div>
+</div>
